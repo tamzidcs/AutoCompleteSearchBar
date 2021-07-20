@@ -7,12 +7,10 @@
   width: max-content;
   margin: 0 auto;
 }
-
 .mat-option{
   width: 100%;
   margin: 0 auto;
 }
-
 .search-bar-form input {
     padding: 10px;
     font-size: 17px;
@@ -20,9 +18,23 @@
     float: left;
     width: 80%;
     background: #f1f1f1;
-  
 }
 .search-bar h1
 {
   padding:2vw;
+}
+.details_table
+{
+  padding-top: 10vw;
+  width: max-content;
+  margin: 0 auto;
+}
+.details_table td
+{
+  padding: 1vw;
+}
+.details_table th
+{
+  padding: 1vw;
+  text-align: right;
 }

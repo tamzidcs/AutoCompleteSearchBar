@@ -1,16 +1,34 @@
 <div class="search-bar">
   <div id="title-header">
-    <h1>Angular Material Auto Complete Example</h1>
+    <h1>Search Cities and Towns in New York State</h1>
   </div>
   <form class="search-bar-form">
-    <input type="text" matInput placeholder="Search for a city" [formControl]="control" [matAutocomplete]="auto">
+    <input type="text" matInput placeholder="Search for a city or town" [formControl]="control"
+      [matAutocomplete]="auto">
     <div>
       <mat-autocomplete #auto="matAutocomplete">
-        <mat-option *ngFor="let cities of filteredCities | async" [value]="cities">
+        <mat-option *ngFor="let cities of filteredCities | async" [value]="cities" (click)=citySelected(cities)>
           {{cities}}
         </mat-option>
       </mat-autocomplete>
     </div>
+   
   </form>
-
+  
+  <div *ngIf="cityIsSelected;"  class="details_table">
+    <table>
+      <tr>
+        <th>Name</th>
+        <td>{{selectedCity.name}}</td>
+      </tr>
+      <tr>
+        <th>County</th>
+        <td>{{selectedCity.county}}</td>
+      </tr>
+      <tr>
+        <th>Population</th>
+        <td>{{selectedCity.population}}</td>
+      </tr>
+    </table>
+  </div>
 </div>
