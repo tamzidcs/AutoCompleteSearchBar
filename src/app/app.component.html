@@ -4,7 +4,7 @@
   </div>
   <form class="search-bar-form">
     <input type="text" matInput placeholder="Search for a city or town" [formControl]="control"
-      [matAutocomplete]="auto">
+      [matAutocomplete]="auto" class="search-input">
     <div>
       <mat-autocomplete #auto="matAutocomplete">
         <mat-option *ngFor="let cities of filteredCities | async" [value]="cities" (click)=citySelected(cities)>
@@ -12,23 +12,23 @@
         </mat-option>
       </mat-autocomplete>
     </div>
-   
+    <div *ngIf="cityIsSelected;"  class="details_table">
+      <table>
+        <tr>
+          <th>Name:</th>
+          <td>{{selectedCity.name}}</td>
+        </tr>
+        <tr>
+          <th>County:</th>
+          <td>{{selectedCity.county}}</td>
+        </tr>
+        <tr>
+          <th>Population<br/> (2010):</th>
+          <td>{{selectedCity.population}}</td>
+        </tr>
+      </table>
+    </div>
   </form>
   
-  <div *ngIf="cityIsSelected;"  class="details_table">
-    <table>
-      <tr>
-        <th>Name</th>
-        <td>{{selectedCity.name}}</td>
-      </tr>
-      <tr>
-        <th>County</th>
-        <td>{{selectedCity.county}}</td>
-      </tr>
-      <tr>
-        <th>Population</th>
-        <td>{{selectedCity.population}}</td>
-      </tr>
-    </table>
-  </div>
+ 
 </div>

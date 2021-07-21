@@ -16,8 +16,9 @@
     font-size: 17px;
     border: 1px solid grey;
     float: left;
-    width: 80%;
+    width: max-content;
     background: #f1f1f1;
+    margin: 0 auto;
 }
 .search-bar h1
 {
@@ -28,13 +29,17 @@
   padding-top: 10vw;
   width: max-content;
   margin: 0 auto;
+  
 }
 .details_table td
 {
   padding: 1vw;
+  background-color: beige;
 }
 .details_table th
 {
   padding: 1vw;
   text-align: right;
+  background-color: burlywood;
 }
+
