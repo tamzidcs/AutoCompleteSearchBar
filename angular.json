@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "SearchPlacesInNewyork": {
+    "SearchPlacesInNewYork": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:application": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/SearchPlacesInNewyork",
+            "outputPath": "dist/SearchPlacesInNewYork",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -66,18 +66,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "SearchPlacesInNewyork:build"
+            "browserTarget": "SearchPlacesInNewYork:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "SearchPlacesInNewyork:build:production"
+              "browserTarget": "SearchPlacesInNewYork:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "SearchPlacesInNewyork:build"
+            "browserTarget": "SearchPlacesInNewYork:build"
           }
         },
         "test": {
@@ -115,16 +115,16 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "SearchPlacesInNewyork:serve"
+            "devServerTarget": "SearchPlacesInNewYork:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "SearchPlacesInNewyork:serve:production"
+              "devServerTarget": "SearchPlacesInNewYork:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "SearchPlacesInNewyork"
+  "defaultProject": "SearchPlacesInNewYork"
 }
