@@ -12,23 +12,27 @@
         </mat-option>
       </mat-autocomplete>
     </div>
-    <div *ngIf="cityIsSelected;"  class="details_table">
-      <table>
-        <tr>
-          <th>Name:</th>
-          <td>{{selectedCity.name}}</td>
-        </tr>
-        <tr>
-          <th>County:</th>
-          <td>{{selectedCity.county}}</td>
-        </tr>
-        <tr>
-          <th>Population<br/> (2010):</th>
-          <td>{{selectedCity.population}}</td>
-        </tr>
-      </table>
-    </div>
+    
+    
   </form>
   
- 
+  <div *ngIf="cityIsSelected;"  class="details-table">
+    <table>
+      <tr>
+        <th>Name:</th>
+        <td>{{selectedCity.name}}</td>
+      </tr>
+      <tr>
+        <th>County:</th>
+        <td>{{selectedCity.county}}</td>
+      </tr>
+      <tr>
+        <th>Population<br/> (2010):</th>
+        <td>{{selectedCity.population}}</td>
+      </tr>
+    </table>
+    <div class="picture-view">
+      <img src="/assets/default-picture.jpg" height="320" width="320">
+    </div>
+  </div>
 </div>

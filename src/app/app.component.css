@@ -15,7 +15,7 @@
     padding: 10px;
     font-size: 17px;
     border: 1px solid grey;
-    float: left;
+    
     width: max-content;
     background: #f1f1f1;
     margin: 0 auto;
@@ -24,22 +24,29 @@
 {
   padding:2vw;
 }
-.details_table
+.details-table
 {
-  padding-top: 10vw;
+  padding-top: 6vw;
   width: max-content;
   margin: 0 auto;
+  display: inline-flex;
   
 }
-.details_table td
+.details-table td
 {
   padding: 1vw;
   background-color: beige;
+  width: 10vw;
+
 }
-.details_table th
+.details-table th
 {
   padding: 1vw;
   text-align: right;
   background-color: burlywood;
 }
-
+.picture-view
+{
+  padding-left: 5vw;
+  display: inline-flex;
+}
