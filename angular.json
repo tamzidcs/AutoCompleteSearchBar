@@ -126,5 +126,8 @@
       }
     }
   },
-  "defaultProject": "SearchPlacesInNewYork"
+  "defaultProject": "SearchPlacesInNewYork",
+  "cli": {
+    "analytics": false
+  }
 }
