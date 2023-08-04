@@ -1,0 +1,13 @@
+<div class="search-form-container">
+    <form class="search-form">
+        <input type="text" matInput placeholder="Search for a city or town" [formControl]="control"
+            class="search-input">
+        <div>
+            <!-- <mat-autocomplete #auto="matAutocomplete">
+                <mat-option *ngFor="let cities of filteredCities | async" [value]="cities" (click)=citySelected(cities)>
+                {{cities}}
+            </mat-option> 
+            </mat-autocomplete> -->
+        </div>
+    </form>
+</div>

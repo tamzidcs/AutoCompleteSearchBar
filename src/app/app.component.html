@@ -1,38 +1,7 @@
-<div class="search-bar">
-  <div id="title-header">
-    <h1>Search Cities and Towns in New York State</h1>
+<div class="main-container">
+  <div class="title-header">
+    Search Places in New York
   </div>
-  <form class="search-bar-form">
-    <input type="text" matInput placeholder="Search for a city or town" [formControl]="control"
-      [matAutocomplete]="auto" class="search-input">
-    <div>
-      <mat-autocomplete #auto="matAutocomplete">
-        <mat-option *ngFor="let cities of filteredCities | async" [value]="cities" (click)=citySelected(cities)>
-          {{cities}}
-        </mat-option>
-      </mat-autocomplete>
-    </div>
-    
-    
-  </form>
-  
-  <div *ngIf="cityIsSelected;"  class="details-table">
-    <table>
-      <tr>
-        <th>Name:</th>
-        <td>{{selectedLibrary.name}}</td>
-      </tr>
-      <tr>
-        <th>Street:</th>
-        <td>{{selectedLibrary.streetName}}</td>
-      </tr>
-      <tr>
-        <th>ZIP</th>
-        <td>{{selectedLibrary.zipCode}}</td>
-      </tr>
-    </table>
-    <div class="picture-view">
-      <img src="/assets/default-picture.jpg" height="320" width="320">
-    </div>
-  </div>
+  <app-search-form></app-search-form>
+  <app-place-details-view />
 </div>

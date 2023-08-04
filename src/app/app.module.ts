@@ -17,10 +17,15 @@ import {MatDialogModule} from '@angular/material/dialog';
 import {MatInputModule} from '@angular/material/input';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations'
 import { HttpClientModule } from '@angular/common/http';
+import { SearchFormComponent } from './components/search-form/search-form.component';
+import { PlaceDetailsViewComponent } from './components/place-details-view/place-details-view.component';
+import { PlacesService } from './services/places.service';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    SearchFormComponent,
+    PlaceDetailsViewComponent
   ],
   imports: [
     BrowserModule,
@@ -35,9 +40,8 @@ import { HttpClientModule } from '@angular/common/http';
     MatDialogModule,
     MatInputModule,
     BrowserAnimationsModule,
-    HttpClientModule
+    HttpClientModule,
     ],
-  providers: [],
   bootstrap: [AppComponent]
 }) 
 export class AppModule { }

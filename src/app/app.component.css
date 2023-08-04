@@ -1,52 +1,15 @@
-.search-bar-form {
-  width: max-content;
-  margin: 0 auto;
-  }
-.search-bar
-{
-  width: max-content;
+.main-container{
+  display: block;
+  width: 800px;
   margin: 0 auto;
 }
-.mat-option{
-  width: 100%;
-  margin: 0 auto;
-}
-.search-bar-form input {
-    padding: 10px;
-    font-size: 17px;
-    border: 1px solid grey;
-    
-    width: max-content;
-    background: #f1f1f1;
-    margin: 0 auto;
-}
-.search-bar h1
-{
+.main-container h1{
   padding:2vw;
 }
-.details-table
-{
-  padding-top: 6vw;
-  width: max-content;
-  margin: 0 auto;
-  display: inline-flex;
-  
-}
-.details-table td
-{
-  padding: 1vw;
-  background-color: beige;
-  width: 10vw;
-
-}
-.details-table th
-{
-  padding: 1vw;
-  text-align: right;
-  background-color: burlywood;
-}
-.picture-view
-{
-  padding-left: 5vw;
-  display: inline-flex;
+.title-header {
+  display: block;
+  width: 800px;
+  text-align: center;
+  font-size: 30px;
+  padding: 15px;
 }

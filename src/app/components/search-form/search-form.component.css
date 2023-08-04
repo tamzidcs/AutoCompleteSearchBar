@@ -1,0 +1,18 @@
+.search-form-container {
+    display: inline-block;
+    width: 200px;
+    vertical-align: top;
+}
+.mat-option{
+    width: 100%;
+    margin: 0 auto;
+}
+.search-bar-form input {
+    padding: 10px;
+    font-size: 17px;
+    border: 1px solid grey;
+    
+    width: max-content;
+    background: #f1f1f1;
+    margin: 0 auto;
+}
