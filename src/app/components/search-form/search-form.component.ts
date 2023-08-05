@@ -16,22 +16,28 @@ import { PlacesService } from '../../services/places.service';
 export class SearchFormComponent {
   control = new FormControl();
   filteredPlaces: Observable<string[]> = new Observable<string[]>();
-  constructor(public palcesService: PlacesService) {}
-  // ngOnInit() {
-  //   this.filteredPlaces = this.control.valueChanges.pipe(
-  //     startWith(''),
-  //     map((value: any) => this._filter(value))
-  //   );
-  // }
+  constructor(private palcesService: PlacesService) {
 
-  // private _normalizeValue(value: string): string {
-  //   return value.toLowerCase().replace(/\s/g, '');
-  // }
+  }
+  ngOnInit() {
+    this.filteredPlaces = this.control.valueChanges.pipe(
+      startWith(''),
+      map((value: any) => this._filter(value))
+    );
+  }
 
-  // private _filter(value: string): string[] {
-  //   const filterValue = this._normalizeValue(value);
-  //   return this.palcesService.placeName.filter((placeName) =>
-  //     this._normalizeValue(placeName).includes(filterValue)
-  //   );
-  // }
+  private _normalizeValue(value: string): string {
+    return value.toLowerCase().replace(/\s/g, '');
+  }
+
+  private _filter(value: string): string[] {
+    const filterValue = this._normalizeValue(value);
+    return this.palcesService.placeName.filter((placeName) =>
+      this._normalizeValue(placeName).includes(filterValue)
+    );
+  }
+
+  public placeSelected(placeName: String) {
+    this.palcesService.placeSelected(placeName);
+  }
 }

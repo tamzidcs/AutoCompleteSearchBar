@@ -1,26 +1,25 @@
 import { Component } from '@angular/core';
 import { PlacesService } from 'src/app/services/places.service';
 import { Injectable } from '@angular/core';
+import {Place} from '../../interfaces/places'
 
 @Component({
   selector: 'app-place-details-view',
   templateUrl: './place-details-view.component.html',
   styleUrls: ['./place-details-view.component.css'],
 })
-// class Place {
-//   name: string = '';
-//   streetName: string = '';
-//   zipCode: string = '';
-// }
+
 // @Injectable()
 export class PlaceDetailsViewComponent {
-  pl: String = 'test'
+  place!: Place;
   constructor() {
-    //this.pl = placesService.selectedPlace;
+    this.place = {
+      name: 'place1',
+      streetName: 'street1',
+      zipCode: '0001',
+    };
+    //this.place = placesService.selectedPlace;
   }
 
-  ngOnInit() {
-    
-  }
-  
+  ngOnInit() {}
 }
